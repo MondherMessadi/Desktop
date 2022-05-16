@@ -24,9 +24,10 @@ public class FirstPage extends Application {
     
     @Override
     public void start(Stage primaryStage) {
+               
         try {         
            // Parent root = FXMLLoader.load(getClass().getResource("Reclamation.fxml")) ;    
-           Parent root = FXMLLoader.load(getClass().getResource("mainpage.fxml")) ;
+           Parent root = FXMLLoader.load(getClass().getResource("login.fxml")) ;
             Scene scene = new Scene(root,1500,900);  
            // primaryStage.setTitle("envoyer une reclamation");
             primaryStage.setScene(scene);

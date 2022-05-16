@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="810.0" prefWidth="1315.0" styleClass="transaprent" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui_ghraphique.LoginController">
+   <children>
+      <VBox layoutX="341.0" layoutY="205.0" prefHeight="400.0" prefWidth="223.0" styleClass="parent1" stylesheets="@login.css">
+         <children>
+            <ImageView fitHeight="214.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true" styleClass="border">
+               <image>
+                  <Image url="@../../../../../../Downloads/undraw_Login_re_4vu2-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <HBox layoutX="592.0" layoutY="311.0" prefHeight="66.0" prefWidth="350.0" stylesheets="@login.css">
+         <children>
+            <Pane prefHeight="26.0" prefWidth="26.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" styleClass="border">
+                     <image>
+                        <Image url="@../../../../../../Downloads/kisspng-india-login-computer-icons-emoticon-medicine-user-login-icon-5ab05c8c27d4c1.4591099815215074681632.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <TextField fx:id="ftmail" prefHeight="25.0" prefWidth="202.0" promptText="username" styleClass="border" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="592.0" layoutY="370.0" prefHeight="26.0" prefWidth="350.0" stylesheets="@login.css">
+         <children>
+            <Pane prefHeight="26.0" prefWidth="26.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" styleClass="border">
+                     <image>
+                        <Image url="@../../../../../../Downloads/kisspng-key-computer-icons-symbol-login-login-button-5ac4e44b510923.6034772815228529393319.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <PasswordField fx:id="ftmdp" prefHeight="25.0" prefWidth="204.0" promptText="password" styleClass="border" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </HBox>
+      <Button fx:id="login" alignment="TOP_CENTER" layoutX="679.0" layoutY="474.0" mnemonicParsing="false" onAction="#btn_login" prefHeight="27.0" prefWidth="176.0" style="-fx-background-color: #78C1FF;" styleClass="myButton" stylesheets="@login.css" text="Login">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor></Button>
+      <Label layoutX="695.0" layoutY="526.0" stylesheets="@login.css" text="mot de passe oublier ??" textAlignment="CENTER" textOverrun="CLIP" />
+      <Label layoutX="656.0" layoutY="280.0" stylesheets="@login.css" text="Bienvenue de nouveau dans Forsa.tn" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="Inscriid" layoutX="673.0" layoutY="554.0" onMouseClicked="#Inscription" text="Vouz n'avez pas de compte ? " />
+   </children>
+</AnchorPane>

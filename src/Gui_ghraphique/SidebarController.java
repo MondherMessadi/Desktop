@@ -42,6 +42,8 @@ public class SidebarController implements Initializable {
     private Button Recid;
     @FXML
     private AnchorPane ap;
+    @FXML
+    private Button categorieid;
 
     /**
      * Initializes the controller class.
@@ -50,6 +52,8 @@ public class SidebarController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+     
 
     @FXML
     private void tolandingpage(ActionEvent event) {
@@ -64,25 +68,34 @@ public class SidebarController implements Initializable {
 
     @FXML
     private void profiles(ActionEvent event) {
+        loadPage("GestionUser");
     }
 
     @FXML
     private void produits(ActionEvent event) {
-         loadPage("affichecategoriedashboard");
+        loadPage("afficheproduitdashboard");
+    }
+    
+    @FXML
+    private void categorieD(ActionEvent event) {
+        loadPage("affichecategoriedashboard");
     }
 
     @FXML
     private void jetons(ActionEvent event) {
-               
+            //loadPage("affichejetondashboard");
            // loadPage("Ajoutjeton");
+              loadPage("affichejetondashboard");
     }
 
     @FXML
     private void Maintenance(ActionEvent event) {
+        loadPage("ddashboard");
     }
 
     @FXML
     private void Reclamation(ActionEvent event) {
+           loadPage("Reclamation Details");
     }
       
     
@@ -97,4 +110,6 @@ public class SidebarController implements Initializable {
         bp.setCenter(root);
         
     }
+
+    
 }

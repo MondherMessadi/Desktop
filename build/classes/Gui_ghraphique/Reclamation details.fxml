@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="apid" prefHeight="856.0" prefWidth="1319.0" style="-fx-background-color: #142428;" stylesheets="@styleu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui_ghraphique.ReclamationDetailsController">
+    <stylesheets>
+        <URL value="@reclamation details.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tab" layoutX="18.0" layoutY="91.0" prefHeight="733.0" prefWidth="1291.0">
+        <columns>
+          <TableColumn fx:id="Eid" editable="false" prefWidth="280.0" text="Email" />
+          <TableColumn fx:id="phid" editable="false" minWidth="0.0" prefWidth="132.0" text="Phone" />
+            <TableColumn fx:id="Did" editable="false" prefWidth="445.0" text="Description" />
+            <TableColumn fx:id="Sid" editable="false" minWidth="0.0" prefWidth="136.0" text="Severity" />
+            <TableColumn fx:id="dateid" editable="false" prefWidth="132.0" text="date" />
+            <TableColumn fx:id="Aid" editable="false" minWidth="0.0" prefWidth="193.0" text="Action" />
+        </columns>
+      </TableView>
+      <TextField fx:id="textfieldid" layoutX="1016.0" layoutY="34.0" onKeyPressed="#search" />
+      <ButtonBar layoutX="502.0" layoutY="28.0" prefHeight="40.0" prefWidth="430.0">
+         <buttons>
+            <Button fx:id="severitybuttonid" mnemonicParsing="false" onAction="#severitybutton" text="Severity" />
+            <Button fx:id="tablebuttonid" mnemonicParsing="false" onAction="#tablebutton" text="Reclamation" />
+            <Button fx:id="statbuttonid" mnemonicParsing="false" onAction="#statbutton" prefHeight="31.0" prefWidth="165.0" text="Statistique" />
+         </buttons>
+      </ButtonBar>
+      <Button fx:id="searchBid" layoutX="1223.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: #0197F6;" text="Search" />
+      <Button fx:id="excelid" layoutX="27.0" layoutY="33.0" mnemonicParsing="false" onAction="#downloadexcel" style="-fx-background-color: #0197F6;" text="Excel" />
+   </children>
+</AnchorPane>

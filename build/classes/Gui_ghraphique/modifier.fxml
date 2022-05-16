@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="850.0" minWidth="1300.0" prefHeight="850.0" prefWidth="1300.0" style="-fx-background-color: white;" stylesheets="@styleu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui_ghraphique.ModifierController">
+   <children>
+      <Label layoutX="412.0" layoutY="98.0" text="Nom et prenom">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="415.0" layoutY="145.0" text="email">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="413.0" layoutY="196.0" text="numero telephone">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="412.0" layoutY="246.0" text="sujet">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="415.0" layoutY="322.0" text="message">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="tfNom" layoutX="555.0" layoutY="96.0" prefHeight="25.0" prefWidth="191.0" style="-fx-alignment: center;" />
+      <TextField fx:id="tfemail" layoutX="554.0" layoutY="143.0" prefHeight="25.0" prefWidth="191.0" />
+      <TextField fx:id="tfNumtel" layoutX="555.0" layoutY="194.0" prefHeight="25.0" prefWidth="191.0" />
+      <TextField fx:id="tfSujet" layoutX="555.0" layoutY="244.0" prefHeight="25.0" prefWidth="191.0" />
+      <Text fill="#007bff" layoutX="550.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Demande De Maintenance">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Button layoutX="774.0" layoutY="388.0" mnemonicParsing="false" onAction="#modifier" text="Modifer" />
+      <TextField fx:id="tfMessage" layoutX="555.0" layoutY="292.0" prefHeight="80.0" prefWidth="191.0" />
+      <Button layoutX="869.0" layoutY="388.0" mnemonicParsing="false" onAction="#annuler" text="Annuler" />
+   </children>
+</AnchorPane>

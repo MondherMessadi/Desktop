@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" minHeight="850.0" minWidth="1300.0" prefHeight="850.0" prefWidth="1300.0" style="-fx-background-color: #142428;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Gui_ghraphique.UpdatejetonController">
+   <children>
+      <Button fx:id="cancelid" layoutX="717.0" layoutY="611.0" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="138.0" text="Cancel" />
+      <Button fx:id="updateid" layoutX="458.0" layoutY="611.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="131.0" text="Update" />
+      <TextField fx:id="nameid" layoutX="561.0" layoutY="156.0" promptText="name" />
+      <TextField fx:id="descid" layoutX="561.0" layoutY="217.0" promptText="description" />
+      <TextField fx:id="prid" layoutX="561.0" layoutY="280.0" promptText="price" />
+      <TextField fx:id="clicid" layoutX="561.0" layoutY="340.0" promptText="nombre de clic" />
+      <Label layoutX="396.0" layoutY="402.0" text="Category" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="19.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="cat1id" layoutX="561.0" layoutY="404.0" mnemonicParsing="false" selected="true" text="category 1" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="grpradio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="cat2id" layoutX="562.0" layoutY="456.0" mnemonicParsing="false" text="category 2" textFill="WHITE" toggleGroup="$grpradio">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="cat3id" layoutX="564.0" layoutY="506.0" mnemonicParsing="false" text="category 3" textFill="WHITE" toggleGroup="$grpradio">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

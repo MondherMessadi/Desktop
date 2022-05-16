@@ -20,7 +20,7 @@ import java.sql.Connection;
  */
 public class MyConnection {
 public static MyConnection instance;
-public String url="jbdc:mysql://localhost:3306/forsa";
+public String url="jbdc:mysql://localhost:3306/technogenius";
 public String login="root";
 public String pwd="";
 Connection cnx;
@@ -34,7 +34,7 @@ Connection cnx;
         } */
      
     try {       
-      cnx=  DriverManager.getConnection("jdbc:mysql://localhost:3306/forsa?"+"user=root");   
+      cnx=  DriverManager.getConnection("jdbc:mysql://localhost:3306/technogenius?"+"user=root");   
       System.out.println("connexion etablie");
     } catch (SQLException ex) {
        System.err.println(ex.getMessage());       

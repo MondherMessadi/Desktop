@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="patern1" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui_ghraphique.InscriptionController">
+   <children>
+      <Label layoutX="784.0" layoutY="174.0" text="Inscription">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="760.0" layoutY="283.0" text="prenom">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></Label>
+      <Label layoutX="768.0" layoutY="216.0" text="nom">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="ftnom" layoutX="755.0" layoutY="240.0" promptText="saisir votre nom">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="ftprenom" layoutX="755.0" layoutY="300.0" promptText="saisir votre prenom">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></TextField>
+      <Button fx:id="inscription" layoutX="809.0" layoutY="582.0" mnemonicParsing="false" onAction="#ajouter" style="-fx-background-color: #78C1FF;" styleClass="a href=&quot;#&quot; class=&quot;myButton&quot;&gt;turquoise&lt;/a&gt;.myButton {box-shadow: 0px 10px 14px -7px #276873;background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);background-color:#599bb3;border-radius:8px;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;font-size:20px;font-weight:bold;padding:13px 32px;text-decoration:none;text-shadow:0px 1px 0px #3d768a;}.myButton:hover {background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);background-color:#408c99;}.myButton:active {position:relative;top:1px;}" text="incription" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></Button>
+      <Label layoutX="765.0" layoutY="333.0" text="genre">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></Label>
+      <Label layoutX="769.0" layoutY="396.0" text="mail">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="ftmail" layoutX="757.0" layoutY="421.0" promptText="saisir votre email">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></TextField>
+      <Label layoutX="758.0" layoutY="446.0" text="mot de passe">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="ftmdp" layoutX="757.0" layoutY="472.0" promptText="saisir votre mot de passe">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="ftcomfirm_mdp" layoutX="755.0" layoutY="529.0" promptText="confrimer votre mot de passe">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></TextField>
+      <Label layoutX="758.0" layoutY="497.0" text="comfirmer mot de passe">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="ftgenre" layoutX="755.0" layoutY="357.0" promptText="saisir votre genre ">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font></TextField>
+      <ImageView fitHeight="398.0" fitWidth="350.0" layoutX="379.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/undraw_Mobile_interface_re_1vv9.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

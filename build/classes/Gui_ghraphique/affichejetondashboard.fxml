@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1302.0" style="-fx-background-color: #142428;" stylesheets="@styleu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui_ghraphique.AffichejetondashboardController">
+   <children>
+      <TableView fx:id="tab" layoutX="12.0" layoutY="70.0" prefHeight="743.0" prefWidth="1276.0" stylesheets="@styleu.css">
+        <columns>
+          <TableColumn fx:id="nid" prefWidth="213.0" text="Name" />
+            <TableColumn fx:id="did" prefWidth="503.0" text="Description" />
+            <TableColumn fx:id="pid" prefWidth="110.0" text="Price" />
+            <TableColumn fx:id="cid" prefWidth="93.0" text="clics" />
+            <TableColumn fx:id="catid" prefWidth="119.0" text="category" />
+          <TableColumn fx:id="Aid" prefWidth="237.0" text="Action" />
+        </columns>
+      </TableView>
+      <Button fx:id="addnewjetonid" layoutX="1134.0" layoutY="28.0" mnemonicParsing="false" onAction="#addnewjeton" prefHeight="31.0" prefWidth="154.0" text="add new jeton" />
+      <ButtonBar layoutX="492.0" layoutY="23.0" prefHeight="40.0" prefWidth="317.0">
+        <buttons>
+            <Button fx:id="tablebuttonid" mnemonicParsing="false" onAction="#table" prefHeight="31.0" prefWidth="129.0" text="table" />
+          <Button fx:id="statsbuttonid" mnemonicParsing="false" onAction="#stats" prefHeight="31.0" prefWidth="129.0" text="statistique" />
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="pdfid" layoutX="991.0" layoutY="28.0" mnemonicParsing="false" onAction="#downloadpdf" text="Download pdf" />
+   </children>
+</AnchorPane>

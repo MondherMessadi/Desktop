@@ -16,6 +16,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -37,9 +38,10 @@ public class MainpageController implements Initializable {
     private Button Recmpid;
     @FXML
     private Button maintenancempid;
-    @FXML
     private Button todashboardid;
-
+    @FXML
+    private TextField jetonsnumberid;
+     static int jetonsclics;
     /**
      * Initializes the controller class.
      */
@@ -47,30 +49,30 @@ public class MainpageController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
    
     @FXML
     private void produitmp(ActionEvent event) {
+        loadPage("frontproduits");
+        
         
     }
 
     @FXML
     private void jetonmp(ActionEvent event) {
-        
-         
+               loadPage("affichejeton"); 
     }
 
     @FXML
     private void Reclamationmp(ActionEvent event) {
-             
+          loadPage("Reclamation");   
     }
 
     @FXML
     private void maintenancemp(ActionEvent event) {
+        loadPage("AjouterDemande");
         
     }
 
-    @FXML
     private void todashboard(ActionEvent event) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("sidebar.fxml")); 
                       try {
@@ -93,6 +95,13 @@ public class MainpageController implements Initializable {
         bpid.setCenter(root);
         
     }
+
+     public void setjetons(int message){
+         System.out.println("calleedd jetons ");
+         jetonsclics+=message;
+        this.jetonsnumberid.setText(""+jetonsclics);
+    }
+    
 
   
 

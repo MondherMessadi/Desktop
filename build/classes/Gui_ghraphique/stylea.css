@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root1{
+    -fx-background-image:url('3.jpg');   
+    -fx-background-size:cover;
+}
+
+.table-view{
+    -fx-background-image:url('6.png');   
+    -fx-background-size:cover;
+    
+}

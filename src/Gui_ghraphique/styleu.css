@@ -1,0 +1,27 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+
+
+.button{
+   
+  -fx-background-color: #78C1FF;
+  -fx-background-raduis:#30 0 0 30     
+}
+.button:hover{
+    -fx-background-color:#FFFFFF;
+  -fx-background-raduis:#30 0 0 30  
+      
+}
+
+.button:pressed{
+    
+    -fx-background-color: #78C1FF;
+  -fx-background-raduis:#30 0 0 30    
+    
+}
+
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="hboxid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1319.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui_ghraphique.AffichejetonController">
+   <children>
+      <Button fx:id="orderbyid" mnemonicParsing="false" onAction="#orderby" text="Order By">
+         <HBox.margin>
+            <Insets left="10.0" top="15.0" />
+         </HBox.margin>
+      </Button>
+      <ScrollPane fx:id="spid" prefHeight="570.0" prefWidth="750.0" HBox.hgrow="ALWAYS">
+        <content>
+          <AnchorPane fx:id="apid" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane fx:id="gpid" layoutY="13.0" prefHeight="2.0" prefWidth="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+         <HBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="10.0" />
+         </HBox.margin>
+      </ScrollPane>
+   </children>
+</HBox>

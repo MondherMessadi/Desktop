@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="856.0" prefWidth="1319.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui_ghraphique.PiechartseverityController">
+   <children>
+      <PieChart fx:id="piechart" layoutX="14.0" layoutY="183.0" prefHeight="490.0" prefWidth="627.0" />
+      <PieChart fx:id="piechart2" layoutX="678.0" layoutY="183.0" prefHeight="490.0" prefWidth="627.0" />
+      <ButtonBar layoutX="502.0" layoutY="28.0" prefHeight="40.0" prefWidth="430.0">
+        <buttons>
+            <Button fx:id="severitybuttonid" mnemonicParsing="false" onAction="#severitybutton" text="Severity" />
+          <Button fx:id="tablebuttonid" mnemonicParsing="false" onAction="#tablebutton" text="Reclamation" />
+            <Button fx:id="statbuttonid" mnemonicParsing="false" onAction="#statbutton" prefHeight="31.0" prefWidth="165.0" text="statistique" />
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="percentlabel" layoutX="1231.0" layoutY="122.0" />
+      <Label fx:id="purcentlabel2" layoutX="1196.0" layoutY="112.0" />
+   </children>
+</AnchorPane>

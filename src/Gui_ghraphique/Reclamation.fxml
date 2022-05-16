@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="850.0" minWidth="1300.0" prefHeight="850.0" prefWidth="1300.0" style="-fx-background-color: #FFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI_Ghraphique.ReclamationController">
+   <children>
+      <Label layoutX="400.0" layoutY="53.0" prefHeight="21.0" prefWidth="148.0" text="Email" textFill="#78c1ff">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label layoutX="400.0" layoutY="106.0" text="Numero Tel" textFill="#78c1ff">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label layoutX="400.0" layoutY="152.0" text="Description" textFill="#78c1ff">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <TextField fx:id="Phonenumberid" layoutX="557.0" layoutY="101.0" />
+      <TextField fx:id="Emailid" layoutX="557.0" layoutY="48.0" />
+      <TextField fx:id="descriptionid" layoutX="557.0" layoutY="152.0" prefHeight="70.0" prefWidth="187.0" />
+      <Label layoutX="400.0" layoutY="248.0" text="Severite" textFill="#78c1ff">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Button fx:id="validerid" layoutX="582.0" layoutY="476.0" mnemonicParsing="false" onAction="#SaveReclamation" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: #78C1FF;" text="Envoyer" textFill="WHITE" />
+      <RadioButton fx:id="highid" layoutX="558.0" layoutY="348.0" mnemonicParsing="false" text="High" textFill="#78c1ff">
+         <toggleGroup>
+            <ToggleGroup fx:id="sev" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="normalid" layoutX="557.0" layoutY="249.0" mnemonicParsing="false" selected="true" text="Normal" textFill="#78c1ff" toggleGroup="$sev">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="averageid" layoutX="558.0" layoutY="299.0" mnemonicParsing="false" text="Average" textFill="#78c1ff" toggleGroup="$sev">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></RadioButton>
+      <Label fx:id="EVlabel" layoutX="557.0" layoutY="79.0" textFill="RED" />
+      <Label fx:id="PVlabel" layoutX="557.0" layoutY="132.0" textFill="RED" />
+      <Label fx:id="DVlabel" layoutX="557.0" layoutY="228.0" textFill="#e80000" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

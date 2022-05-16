@@ -6,6 +6,7 @@
 package package_services;
 
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,9 +24,13 @@ import package_entities.Categorie;
  *
  * @author Mondher
  */
-public class CRUD_Categorie {
+public class CRUD_Categorie implements IService<Categorie>{
+    Connection cnx = MyConnection.getInstance().getCnx();
+    private Statement st; 
+    private PreparedStatement pst;
+    private ResultSet ls;
     
-    public void ajouterCategorie(){
+    public void ajouter2() throws SQLException{
     String requete = 
             "INSERT INTO categorie (Name)"
             + "VALUES('test1',1)";
@@ -43,8 +48,8 @@ System.err.println(ex.getMessage());
 }
 
 
-///////////////////////////////ajout reclamation methode 2
-public void ajouterCategorie2(Categorie c){
+
+public void ajouter(Categorie c) throws SQLException{
     try {
         String requete2 =
                 "INSERT INTO categorie (Name)"
@@ -60,8 +65,8 @@ public void ajouterCategorie2(Categorie c){
 }
 
 
-///////////////////////////////////////////////afficher///////////////////
-public ObservableList<Categorie> afficherCategorie(){
+
+public ObservableList<Categorie> afficherCategorie() throws SQLException{
     //List<Reclamation> myList = new ArrayList<>();
      ObservableList<Categorie>myList=FXCollections.observableArrayList();
     try { 
@@ -82,27 +87,10 @@ System.err.println(ex.getMessage());
     }
  return myList;
 }
-/////////////////////////////delete reclamation/////////////////////////////////
-public void deleteCategorie(Categorie C){
-   
-    
-    try {  
-        String requete = 
-        "DELETE from categorie where id="+C.getId();
-        PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
-         
-        //pst.setInt(1,R.getId());
-        Statement st= new MyConnection().getCnx().createStatement();
-        st.executeUpdate(requete);
-        //execute update for "insert" "update" or "delete requete
-        //or executequery for "select" requete
-       // System.out.println("deleting reclamation id :"+ R.getId()+" "+requete);
-    } catch (SQLException ex) {
-System.err.println(ex.getMessage()); 
-    }
 
-}
-public void updateCategorie(Categorie C){ 
+
+
+public void modifier(Categorie C){ 
     try {  
         System.out.println("updating categorie  : "+C);
         String requete = 
@@ -121,5 +109,85 @@ System.err.println(ex.getMessage());
     }
 
 }
+
+    public List<Categorie> getAll() throws SQLException {
+        String req="select * from categorie";
+        List<Categorie> list = new ArrayList<>();
+        
+        try {
+            st=cnx.createStatement();
+            ls=st.executeQuery(req);
+            while(ls.next())
+            {
+                list.add(new Categorie(ls.getInt(1),ls.getString(2)));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(CRUD_Categorie.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
+
+    public void supprimer(Categorie R) throws SQLException {
+       try {  
+        String requete = 
+        "DELETE from categorie where id="+R.getId();
+        PreparedStatement pst = new MyConnection().getCnx().prepareStatement(requete);
+         
+        //pst.setInt(1,R.getId());
+        Statement st= new MyConnection().getCnx().createStatement();
+        st.executeUpdate(requete);
+        //execute update for "insert" "update" or "delete requete
+        //or executequery for "select" requete
+       // System.out.println("deleting reclamation id :"+ R.getId()+" "+requete);
+    } catch (SQLException ex) {
+System.err.println(ex.getMessage()); 
+    }
+   
+    }
+   
+    
+    public List<Categorie> ListClasse() {
+        List<Categorie> Mylist = new ArrayList<>();
+        try {
+            String requete = "select * from categorie ORDER BY name ASC ";
+            PreparedStatement pst = cnx.prepareStatement(requete);
+           
+      ResultSet e = pst.executeQuery();
+            while (e.next()) {
+                Categorie pre = new Categorie();
+             
+             pre.setId(e.getInt("Id"));
+            pre.setName(e.getString("Name"));
+            
+           
+           
+                Mylist.add(pre);
+            }
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return Mylist;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Categorie> displayAll() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void supprimerU(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
+
+    
+
     
 }
